@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Article Preview</title>
+</head>
+<body>
+    <img src="./images/drawers.jpg" alt="drawers image" class="imgDrawer">
+    <section>
+        <h1 class="articleText">
+            Shift the overall look and feels by adding these wonderful touches to furniture in your home
+        </h1>
+        <p class="miniText">
+            Ever been in a room and left like something was missing? Perhaps it felt
+            slightly bare and uninviting. I've got some simple tips to help you make
+            any room feel complete.
+        </p>
+        <div id="balao"  class="balao hidden">
+                <p class="Frase">SHARE</p>
+                <img src="./images/icon-facebook.svg" alt="Facebook" class="Facebook">
+                <img src="./images/icon-pinterest.svg" alt="Pinteres" class="Pinterest">
+                <img src="./images/icon-twitter.svg" alt="Twitter" class="Twitter">
+        </div>
+        <div class="Footer">
+            <img src="./images/avatar-michelle.jpg" alt="avatar" class="avatar">
+            <h1 class="nameTag">Michelle Appleton</h1>
+            <button type="button" id="btnShare" onclick="compartilhar()"><img src="./images/icon-share.svg" alt="share button"></button>
+            <p class="dateTag">28 Jun 2020</p>
+        </div>
+        
+    </section>
+    <script>
+        function compartilhar(){
+            const shareButton = document.getElementById('btnShare');
+            const sharePop = document.getElementById('balao');
+
+
+            shareButton.addEventListener('click', () => {
+                sharePop.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (event) => {
+                if(!shareButton.contains(event.target) && !sharePop.contains(event.target)){
+                    sharePop.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>

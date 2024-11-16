@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 233px 150px;
+    align-items: center;
+    justify-content: center;
+    margin: 27vh 57vw 0 35vw;
+    background-color: hsl(210, 46%, 95%);
+    font-family: "Manrope", sans-serif;
+}
+
+.imgDrawer{
+    width: 20vw;
+    height: 42vh;
+    border-radius: 10px 0 0 10px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:hsl(0, 0%, 100%) ;
+    width: 32vw;
+    height: 42vh;
+    padding: 20px 35px 20px 45px ;
+    border-radius: 0 10px 10px 0 ;
+}
+
+.articleText{
+    color: hsl(217, 19%, 35%) ;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.miniText{
+    color: hsl(214, 17%, 51%);
+    font-weight: 500;
+    font-size: 13px;
+    margin: 12px 20px 12px 0;
+}
+
+.Footer{
+    display: grid;
+    grid-template-columns:25px 270px 20px;
+    margin-top: 10px;
+}
+
+.nameTag{
+    font-size: 13px;
+    color: hsl(217, 19%, 35%);
+}
+
+.dateTag{
+    color: hsl(214, 17%, 51%);
+    font-size: 13px;
+    margin: -15px -100px 0 25px;
+}
+
+#btnShare{
+    border-radius: 50px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.avatar{
+    width: 35px;
+    border-radius: 50px;
+    margin: 0 0 0 -25px;
+}
+
+.balao{
+    display: grid;
+    grid-template-columns: 80px 30px 30px 50px;
+    padding: 10px 30px 10px 30px ;
+    align-items: center;
+    background: hsl(217, 19%, 35%);
+    border-radius: 8px;
+    width: 15%;
+    height: 10%;
+    margin: 0 -270px 0 30px;
+    position: absolute;
+    z-index: 1000;
+}
+
+.balao::after{
+    
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid hsl(217, 19%, 35%);
+    bottom: -9px;
+    right: 45%;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.Frase{
+    color: hsla(210, 46%, 95%, 0.648);
+    font-size: 13px;
+    letter-spacing: 4px;
+}
